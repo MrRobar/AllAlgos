@@ -1,4 +1,8 @@
-﻿using BenchmarkDotNet.Running;
+﻿using BenchmarkDotNet.Configs;
+using BenchmarkDotNet.Jobs;
+using BenchmarkDotNet.Running;
+using BenchmarkDotNet.Toolchains.InProcess.Emit;
+using System;
 
 namespace AllAlgosCombined
 {
@@ -6,8 +10,8 @@ namespace AllAlgosCombined
     {
         static void Main(string[] args)
         {
-
-            BenchmarkRunner.Run<MergeSortBenchmark>();
+            BenchmarkRunner.Run<SortingBenchmarks>();
+            Console.Read();
         }
     }
 }

@@ -1,0 +1,42 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// ***** Done, took 00:00:00 (0 sec)   *****
+// Found 1 benchmarks:
+//   HeapVariantBenchmarks.HeapBasedSearch: MediumRun(Toolchain=InProcessNoEmitToolchain, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+Setup power plan (GUID: 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c FriendlyName: Высокая производительность)
+// **************************
+// Benchmark: HeapVariantBenchmarks.HeapBasedSearch: MediumRun(Toolchain=InProcessNoEmitToolchain, IterationCount=15, LaunchCount=2, WarmupCount=10)
+// *** Execute ***
+// Launch: 1 / 2
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Framework 4.8.1 (4.8.9166.0), X86 LegacyJIT
+// GC=Concurrent Workstation
+// HardwareIntrinsics= 
+// Job: MediumRun(Toolchain=InProcessNoEmitToolchain, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 500.00 ns, 500.0000 ns/op
+WorkloadJitting  1: 1 op, 718000.00 ns, 718.0000 us/op
+
+OverheadJitting  2: 16 op, 300.00 ns, 18.7500 ns/op
+
+System.Reflection.TargetInvocationException: Адресат вызова создал исключение. ---> System.InvalidOperationException: Heap is full
+   в AllAlgosCombined.MinHeap.Add(Int32 value) в C:\Valeras\Projects\AllAlgos\AllAlgosCombined\MinHeap.cs:строка 20
+   в AllAlgosCombined.HeapVariant.InitialHeapFill(MinHeap heap, Int32[] arr) в C:\Valeras\Projects\AllAlgos\AllAlgosCombined\HeapVariant.cs:строка 29
+   в AllAlgosCombined.HeapVariantBenchmarks.HeapBasedSearch() в C:\Valeras\Projects\AllAlgos\AllAlgosCombined\HeapVariantBenchmarks.cs:строка 27
+   в System.Action.Invoke()
+   в BenchmarkDotNet.Toolchains.InProcess.NoEmit.BenchmarkActionFactory.BenchmarkActionVoid.InvokeMultipleHardcoded(Int64 repeatCount)
+   в BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   в BenchmarkDotNet.Engines.EngineFactory.Jit(Engine engine, Int32 jitIndex, Int32 invokeCount, Int32 unrollFactor)
+   в BenchmarkDotNet.Engines.EngineFactory.CreateReadyToRun(EngineParameters engineParameters)
+   в BenchmarkDotNet.Toolchains.InProcess.NoEmit.InProcessNoEmitRunner.Runnable.RunCore(IHost host, BenchmarkCase benchmarkCase)
+   --- Конец трассировки внутреннего стека исключений ---
+   в System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+   в System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)
+   в System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   в BenchmarkDotNet.Toolchains.InProcess.NoEmit.InProcessNoEmitRunner.Run(IHost host, BenchmarkCase benchmarkCase)
+Successfully reverted power plan (GUID: 6fecc5ae-f350-48a5-b669-b472cb895ccf FriendlyName: Turbo)
+// * Artifacts cleanup *
