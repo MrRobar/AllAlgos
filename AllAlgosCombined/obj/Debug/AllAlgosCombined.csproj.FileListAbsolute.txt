@@ -283,3 +283,4 @@ C:\Valeras\Projects\AllAlgos\AllAlgosCombined\obj\Debug\AllAlgosCombined.csproj.
 C:\Valeras\Projects\AllAlgos\AllAlgosCombined\obj\Debug\AllAlgosCombined.csproj.CopyComplete
 C:\Valeras\Projects\AllAlgos\AllAlgosCombined\obj\Debug\AllAlgosCombined.exe
 C:\Valeras\Projects\AllAlgos\AllAlgosCombined\obj\Debug\AllAlgosCombined.pdb
+C:\Valeras\Projects\AllAlgos\AllAlgosCombined\obj\Debug\AllAlgosCombined.csprojAssemblyReference.cache

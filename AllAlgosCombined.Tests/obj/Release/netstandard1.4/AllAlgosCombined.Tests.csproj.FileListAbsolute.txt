@@ -1,0 +1,5 @@
+C:\Valeras\Projects\AllAlgos\AllAlgosCombined.Tests\bin\Release\netstandard1.4\AllAlgosCombined.Tests.deps.json
+C:\Valeras\Projects\AllAlgos\AllAlgosCombined.Tests\bin\Release\netstandard1.4\AllAlgosCombined.Tests.dll
+C:\Valeras\Projects\AllAlgos\AllAlgosCombined.Tests\obj\Release\netstandard1.4\AllAlgosCombined.Tests.csprojAssemblyReference.cache
+C:\Valeras\Projects\AllAlgos\AllAlgosCombined.Tests\obj\Release\netstandard1.4\AllAlgosCombined.Tests.csproj.CoreCompileInputs.cache
+C:\Valeras\Projects\AllAlgos\AllAlgosCombined.Tests\obj\Release\netstandard1.4\AllAlgosCombined.Tests.AssemblyInfo.cs
